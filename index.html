@@ -25,24 +25,6 @@
         </div>
         <div class="row">
             <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">Olive</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.olive[0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.olive[0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.olive[0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.olive[1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.olive[1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.olive[1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.olive[2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.olive[2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.olive[2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.olive[3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.olive[3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.olive[3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.olive[4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.olive[4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.olive[4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.olive[5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.olive[5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.olive[5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">Moutarde</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.moutarde[0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.moutarde[0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.moutarde[0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.moutarde[1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.moutarde[1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.moutarde[1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.moutarde[2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.moutarde[2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.moutarde[2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.moutarde[3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.moutarde[3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.moutarde[3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.moutarde[4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.moutarde[4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.moutarde[4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="suspects.moutarde[5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="suspects.moutarde[5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="suspects.moutarde[5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">Orchidée</div>
             <div class="col-1 p-0 border-dark-1 bg-dark-2"></div>
             <div class="col-1 p-0 border-dark-1 bg-dark-2"></div>
             <div class="col-1 p-0 border-dark-1 bg-dark-2"></div>
@@ -50,7 +32,19 @@
             <div class="col-1 p-0 border-dark-1 bg-dark-2"></div>
             <div class="col-1 p-0 border-dark-1 bg-dark-2">{{componentKey}}</div>
         </div>
-        <button @click="test()" type="button" class="btn btn-primary">Primary</button>
+
+        <div class="row">
+            <div class="olive col-1 p-0 border-dark-1 bg-dark-2" v-for="info in infos[0][0]">
+                {{ info }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 p-0 border-dark-1 bg-dark-2" v-for="info in infos[0][1]">
+                {{ info }}
+            </div>
+        </div>
+
 
         <!-- Partie Armes -->
 

@@ -1,3 +1,12 @@
+.olive {
+    visibility: hidden;
+}
+
+.olive::after {
+    content: 'Ok'; 
+    visibility: visible;
+}
+
 
 
 
