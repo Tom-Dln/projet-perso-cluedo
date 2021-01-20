@@ -1,0 +1,30 @@
+
+
+
+
+
+
+.bg-dark-1 {
+    background: #252525 !important;
+}
+
+.bg-dark-2 {
+    background: #4D4D4D !important;
+}
+
+.border-dark-1 {
+    border: 2px solid #252525 !important;
+}
+
+
+.bg-valid {
+    background: green !important;
+}
+
+.bg-uncertain {
+    background: orange !important;
+}
+
+.bg-invalid {
+    background: red !important;
+}
