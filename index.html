@@ -9,221 +9,329 @@
 </head>
 <body class="bg-primary py-5">
     <div id="app" class="container p-4 rounded text-center text-white bg-dark-1">
-        <div class="row font-weight-bold">
-            <div class="col-6 text-left"></div>
-            <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[0]}}</div>
-            <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[1]}}</div>
-            <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[2]}}</div>
-            <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[3]}}</div>
-            <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[4]}}</div>
-            <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[5]}}</div>
-        </div>
-        <!-- Partie Suspects -->
-        <div class="row my-1">
-            <div class="col-6 px-1 rounded text-left font-weight-bold border-dark-1 bg-dark-2">{{version[21]}}</div>
-            <div class="col-6"></div>
-        </div>
         <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[0]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+            <div class="col-12 col-lg-7">
+                <div class="row font-weight-bold">
+                    <div class="col-6 text-left"></div>
+                    <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[0]}}</div>
+                    <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[1]}}</div>
+                    <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[2]}}</div>
+                    <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[3]}}</div>
+                    <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[4]}}</div>
+                    <div class="col-1 p-0 rounded border-dark-1 bg-dark-2">{{playersNames[5]}}</div>
+                </div>
+                <!-- Partie Suspects -->
+                <div class="row my-1">
+                    <div class="col-6 px-1 rounded text-left font-weight-bold border-dark-1 bg-dark-2">{{version[21]}}</div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[0]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][0][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][0][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][0][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[1]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[2]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[3]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[4]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[5]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <!-- Partie Armes -->
+                <div class="row my-1">
+                    <div class="col-6 px-1 rounded text-left font-weight-bold border-dark-1 bg-dark-2">{{version[22]}}</div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[6]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[7]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[8]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[9]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[10]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[11]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>  
+                <!-- Partie Pièces -->
+                <div class="row my-1">
+                    <div class="col-6 px-1 rounded text-left font-weight-bold border-dark-1 bg-dark-2">{{version[23]}}</div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[12]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[13]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[14]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[15]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[16]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[17]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[18]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[19]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="row">
+                    <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[20]}}</div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                    <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
+                </div>
+                <div class="col-1 p-0 border-dark-1 bg-dark-2">{{componentKey}}</div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div v-if="step == 0" class="row px-4">
+                    <div class="col-12 pb-4"><h2>Choisir les Joueurs :</h2></div>
+                    <div class="col-4 pb-4">
+                        <input type="text" class="form-control text-center" id="player1" placeholder="Joueur 1" maxlength="3" v-model="playersNames[0]">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control text-center" id="player2" placeholder="Joueur 2" maxlength="3" v-model="playersNames[1]">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control text-center" id="player3" placeholder="Joueur 3" maxlength="3" v-model="playersNames[2]">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control text-center" id="player4" placeholder="Joueur 4" maxlength="3" v-model="playersNames[3]">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control text-center" id="player5" placeholder="Joueur 5" maxlength="3" v-model="playersNames[4]">
+                    </div>
+                    <div class="col-4">
+                        <input type="text" class="form-control text-center" id="player6" placeholder="Joueur 6" maxlength="3" v-model="playersNames[5]">
+                    </div>
+                    <button v-on:click="playersAssign()" type="button" class="btn btn-success btn-lg d-block mx-auto mt-4">Valider</button>
+                </div>
+                <div v-if="step == 1" class="row px-4">
+                    <div class="col-12 pb-4"><h2>{{playersNames[turns[1]]}} parle :</h2></div>
+                    <div class="col-12 pb-2"><h3>Suspect :</h3></div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[0] = 0, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[0]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[0] = 1, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[1]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[0] = 2, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[2]}}</button>
+                    </div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[0] = 3, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[3]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[0] = 4, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[4]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[0] = 5, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[5]}}</button>
+                    </div>
+                    <div class="col-12 pb-2"><h3>Arme :</h3></div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[1] = 6, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[6]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[1] = 7, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[7]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[1] = 8, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[8]}}</button>
+                    </div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[1] = 9, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[9]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[1] = 10, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[10]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[1] = 11, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[11]}}</button>
+                    </div>
+                    <div class="col-12 pb-2"><h3>Pièce :</h3></div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[2] = 12, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[12]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[2] = 13, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[13]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[2] = 14, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[14]}}</button>
+                    </div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[2] = 15, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[15]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[2] = 16, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[16]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[2] = 17, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[17]}}</button>
+                    </div>
+                    <div class="col-4 pb-3">
+                        <button v-on:click="turnActual[2] = 18, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[18]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[2] = 19, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[19]}}</button>
+                    </div>
+                    <div class="col-4">
+                        <button v-on:click="turnActual[2] = 20, forceRerender()" type="button" class="btn btn-info px-0 w-100">{{version[20]}}</button>
+                    </div>
+                    <div class="col-12"><p class="mb-0">{{playersNames[turns[1]]}} déclare que <span><u>{{version[turnActual[0]]}}</u></span> a tué avec <span><u>{{version[turnActual[1]]}}</u></span> dans <span><u>{{version[turnActual[2]]}}</u></span>.</p></div>
+                    <button v-on:click="step = 2" type="button" class="btn btn-success btn-lg d-block mx-auto mt-4">Valider</button>
+                </div>
+                <div v-if="step == 2" class="row px-4">
+                    <div class="col-12 pb-4"><h2>{{playersNames[turns[1]]}} parle :</h2></div>
+                    <div class="col-12 pb-3"><h3>{{playersNames[turns[2]]}} montre carte ?</h3></div>
+                    <div class="col-6 pr-3">
+                        <button v-on:click="validation(), forceRerender()" type="button" class="btn btn-success px-0 w-100">Oui</button>
+                    </div>
+                    <div class="col-6 pl-3">
+                        <button v-on:click="validation(), forceRerender()" type="button" class="btn btn-danger px-0 w-100">Non</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[1]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][1][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][1][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][1][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[2]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][2][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][2][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][2][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[3]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][3][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][3][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][3][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[4]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][4][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][4][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][4][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[5]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[0][5][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[0][5][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[0][5][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <!-- Partie Armes -->
-        <div class="row my-1">
-            <div class="col-6 px-1 rounded text-left font-weight-bold border-dark-1 bg-dark-2">{{version[22]}}</div>
-            <div class="col-6"></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[6]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][0][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][0][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][0][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[7]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][1][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][1][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][1][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[8]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][2][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][2][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][2][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[9]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][3][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][3][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][3][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[10]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][4][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][4][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][4][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[11]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[1][5][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[1][5][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[1][5][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>  
-        <!-- Partie Pièces -->
-        <div class="row my-1">
-            <div class="col-6 px-1 rounded text-left font-weight-bold border-dark-1 bg-dark-2">{{version[23]}}</div>
-            <div class="col-6"></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[12]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][0][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][0][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][0][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[13]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][1][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][1][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][1][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[14]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][2][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][2][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][2][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[15]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][3][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][3][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][3][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[16]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][4][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][4][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][4][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[17]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][5][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][5][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][5][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[18]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][6][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][6][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][6][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[19]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][7][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][7][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][7][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="row">
-            <div class="col-6 px-1 text-left border-dark-1 bg-dark-2">{{version[20]}}</div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][0] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][0] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][0] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][1] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][1] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][1] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][2] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][2] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][2] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][3] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][3] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][3] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][4] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][4] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][4] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-            <div class="col-1 p-0 border-dark-1 bg-dark-2"><div v-if="infos[2][8][5] == 'valid'" class="bg-valid"><i class="fas fa-check"></i></div><div v-if="infos[2][8][5] == 'uncertain'" class="bg-uncertain"><i class="fas fa-exclamation"></i></div><div v-if="infos[2][8][5] == 'invalid'" class="bg-invalid"><i class="fas fa-ban"></i></div></div>
-        </div>
-        <div class="col-1 p-0 border-dark-1 bg-dark-2">{{componentKey}}</div>
-
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="js/script.js"></script>
