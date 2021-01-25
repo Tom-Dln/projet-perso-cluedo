@@ -9,8 +9,8 @@ var app = new Vue({
         playersNb: 0,
         // Suspect | Arme | Pièce
         turnActual: ['', '', ''],
-        // Nombre de Tours | Joueur en Cours | Joueur interrogé | Réponse
-        turns: ['1','0','1',false],
+        // Nombre de Tours | Joueur en Cours | Joueur interrogé | Réponses Actuelles
+        turns: [1 , 0 , 1 , 0 ],
         componentKey: 0,
         version: [
             // Suspects 0-5
@@ -44,49 +44,91 @@ var app = new Vue({
         ],
         // J1 | J2 | J3 | J4 | J5 | J6 | Joueur Ayant
         infos: [
-            [
-                ['valid','','','','','','0'],
-                ['uncertain','','','','','',''],
-                ['invalid','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-            ],
-            [
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-            ],
-            [
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-                ['','','','','','',''],
-            ],
+            // Suspects 0-5
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            // Pièces 12-20
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            // Pièces 12-20
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
+            ['','','','','','',''],
         ],
     },
     methods: {
         validation() {
+            // Vérification de Non-Erreur
+            if ((this.infos[this.turnActual[0]][this.turns[2]] == 'invalid') &&
+                (this.infos[this.turnActual[1]][this.turns[2]] == 'invalid') &&
+                (this.infos[this.turnActual[2]][this.turns[2]] == 'invalid')) {
+                alert('Erreur de Jeux')
+            }
+            else {
+                // Cas de la Validation par Déduction Simple
+                if ((this.infos[this.turnActual[0]][this.turns[2]] == 'invalid') &&
+                    (this.infos[this.turnActual[1]][this.turns[2]] == 'invalid')) {
+                    this.infos[this.turnActual[2]][this.turns[2]] = 'valid';
+                    this.infos[this.turnActual[2]][6] = this.turns[2];
+                }
+                if ((this.infos[this.turnActual[1]][this.turns[2]] == 'invalid') &&
+                    (this.infos[this.turnActual[2]][this.turns[2]] == 'invalid')) {
+                    this.infos[this.turnActual[0]][this.turns[2]] = 'valid';
+                    this.infos[this.turnActual[0]][6] = this.turns[2];
+                }
+                if ((this.infos[this.turnActual[0]][this.turns[2]] == 'invalid') &&
+                    (this.infos[this.turnActual[2]][this.turns[2]] == 'invalid')) {
+                    this.infos[this.turnActual[1]][this.turns[2]] = 'valid';
+                    this.infos[this.turnActual[0]][6] = this.turns[2];
+                }
+                // Cas de la Validation par intermédiaire
+                if ((this.infos[this.turnActual[0]][6] != '') &&
+                    (this.infos[this.turnActual[0]][6] != this.turns[2])) {
+
+
+
+                    this.infos[this.turnActual[2]][this.turns[2]] = 'valid';
+                    this.infos[this.turnActual[2]][6] = this.turns[2];
+                    }
+                console.log('Fin de Vérifications')
+            }
+
+
             // Suspect
-            if (this.infos[0][this.turnActual[0]][6] == '' && this.infos[0][this.turnActual[0]][this.turns[2]] != 'invalid') {
-                this.infos[0][this.turnActual[0]][this.turns[2]] = 'uncertain';
-            }
-            // Arme
-            if (this.infos[1][this.turnActual[1]-6][6] == '' && this.infos[1][this.turnActual[1]-6][this.turns[2]] != 'invalid') {
-                this.infos[1][this.turnActual[1]-6][this.turns[2]] = 'uncertain';
-            }
-            // Pièce
-            if (this.infos[2][this.turnActual[2]-12][6] == '' && this.infos[2][this.turnActual[2]-12][this.turns[2]] != 'invalid') {
-                this.infos[2][this.turnActual[2]-12][this.turns[2]] = 'uncertain';
-            }
+            // if ((this.infos[this.turnActual[0]][6] == '') &&
+            //     ( ) ) {
+            //     alert('Test')
+            // }
+
+
+
+
+            // // Suspect
+            // if (this.infos[0][this.turnActual[0]][6] == '' && this.infos[0][this.turnActual[0]][this.turns[2]] != 'invalid') {
+            //     this.infos[0][this.turnActual[0]][this.turns[2]] = 'uncertain';
+            // }
+            // // Arme
+            // if (this.infos[1][this.turnActual[1]-6][6] == '' && this.infos[1][this.turnActual[1]-6][this.turns[2]] != 'invalid') {
+            //     this.infos[1][this.turnActual[1]-6][this.turns[2]] = 'uncertain';
+            // }
+            // // Pièce
+            // if (this.infos[2][this.turnActual[2]-12][6] == '' && this.infos[2][this.turnActual[2]-12][this.turns[2]] != 'invalid') {
+            //     this.infos[2][this.turnActual[2]-12][this.turns[2]] = 'uncertain';
+            // }
             
 
 
@@ -110,12 +152,63 @@ var app = new Vue({
             //         }
             //     }
             // }
+            this.harmonization();
+            this.forceRerender();
+            this.changePlayer();
+        },
+        invalidation() {
+            this.infos[this.turnActual[0]][this.turns[2]] = 'invalid';
+            this.infos[this.turnActual[1]][this.turns[2]] = 'invalid';
+            this.infos[this.turnActual[2]][this.turns[2]] = 'invalid';
+
+
+            this.turns[2]++;
+            if (this.turns[2] == this.playersNb) {
+                this.turns[2] = 0;
+            }
+            this.turns[3]++;
+
+
+            if (this.turns[3] == this.playersNb-1) {
+                this.changePlayer();
+            }
+
+
             this.forceRerender();
         },
         harmonization() {
-
+            let occurences = 0;
+            console.log('Harmonisation')
+            // Remplissage des Validations avec des Invalids
+            for (i=0; i<this.infos.length; i++) {
+                console.log(`Analyse : ${i}`)
+                if (this.infos[i][6] != '') {
+                    console.log('Entrée en Mode Harmonisation')
+                    for (j=0; j<this.playersNb; j++) {
+                        if (this.infos[i][j] != 'valid') {
+                            this.infos[i][j] = 'invalid';
+                        }
+                    }
+                }
+            }
+            // 
+            // for (i=0; i<this.infos.length; i++)
         },
-
+        changePlayer() {
+            this.turnActual[0] = '';
+            this.turnActual[1] = '';
+            this.turnActual[2] = '';
+            this.turns[1]++;
+            if (this.turns[1] == this.playersNb) {
+                this.turns[1] = 0;
+            }
+            this.turns[2] = this.turns[1]+1
+            if (this.turns[2] == this.playersNb) {
+                this.turns[2] = 0;
+            }
+            this.turns[3] = 0;
+            this.step = 1
+        },
         forceRerender() {
             this.componentKey += 1;
         },
